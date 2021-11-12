@@ -7,7 +7,7 @@
 body {
    font-family: var(--main-font);
    color: var(--text-color);
-   background-image: var(--bg-body);
+   //background-image: var(--bg-body);
    background-color: var(--bg-color);
    transition: background 0.5s;
 }
@@ -30,7 +30,6 @@ a {
    color: var(--orange);
    text-decoration: none;
    font-weight: 700;
-   padding: 0 1.5vw;
 }
 .container {
    max-width: 1250px;

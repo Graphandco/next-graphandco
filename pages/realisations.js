@@ -1,6 +1,7 @@
 import Link from "next/link";
-import { createClient } from "contentful";
+import Head from "next/head";
 import Image from "next/image";
+import { createClient } from "contentful";
 
 export async function getStaticProps() {
    const client = createClient({
@@ -19,6 +20,9 @@ const Realisations = ({ realisations }) => {
    // console.log(realisations);
    return (
       <>
+         <Head>
+            <title>Graph and Co | Réalisations</title>
+         </Head>
          <div className="waves">
             <div className="wave1"></div>
             <div className="wave2"></div>

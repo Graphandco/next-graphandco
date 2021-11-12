@@ -5,13 +5,11 @@ const Hero = () => {
    return (
       <section className="hero">
          <div className="waves">
-            <div className="wave1"></div>
-            <div className="wave2"></div>
-            <div className="wave3"></div>
-            <div className="wave4"></div>
-            <div className="wave5"></div>
+            <div className="new-wave"></div>
          </div>
-         <h1>Homepage</h1>
+         <div className="container">
+            <h1>Homepage</h1>
+         </div>
       </section>
    );
 };

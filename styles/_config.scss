@@ -32,6 +32,7 @@
 [data-theme="dark"] {
    --text-color: hsl(217, 28%, 73%);
    --text-color-light: hsl(0, 0%, 80%);
+   --contrast: white;
    // --bg-body: linear-gradient(
    //    190deg,
    //    hsl(217, 97%, 12%) 13.57%,
@@ -46,6 +47,7 @@
 [data-theme="light"] {
    --text-color: hsl(0, 0%, 10%);
    --text-color-light: hsl(0, 0%, 20%);
+   --contrast: black;
    --bg-body: url("/images/bg-body-black.svg");
    --bg-color: hsl(0, 0%, 90%);
    --bg-color-light: hsl(250, 9%, 24%);

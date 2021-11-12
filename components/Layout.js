@@ -5,6 +5,7 @@ export default function Layout({ children }) {
    const [theme, setTheme] = useState("dark");
 
    useEffect(() => {
+      saveTheme(theme);
       document.documentElement.setAttribute(
          "data-theme",
          localStorage.getItem("theme")
