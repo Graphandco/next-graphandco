@@ -1,0 +1,48 @@
+@import "reset";
+@import "config";
+@import "header";
+@import "home-hero";
+@import "realisation-card";
+
+body {
+   font-family: var(--main-font);
+   color: var(--text-color);
+   background-image: var(--bg-body);
+   background-color: var(--bg-color);
+   transition: background 0.5s;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+   font-family: var(--title-font);
+   line-height: 1;
+   color: white;
+}
+h1 {
+   font-size: calc(2rem + 1vw);
+   text-transform: uppercase;
+   position: relative;
+   margin-bottom: 5rem;
+}
+a {
+   color: var(--orange);
+   text-decoration: none;
+   font-weight: 700;
+   padding: 0 1.5vw;
+}
+.container {
+   max-width: 1250px;
+   margin: 0 auto;
+   padding: 2vw;
+}
+.site-wrapper {
+   display: flex;
+   flex-direction: column;
+   min-height: 100vh;
+}
+main {
+   flex-grow: 1;
+   position: relative;
+}

@@ -1,0 +1,60 @@
+.realisations {
+   display: grid;
+   grid-template-columns: repeat(4, 1fr);
+   gap: 5vw;
+   @include mq(tablet) {
+      grid-template-columns: repeat(3, 1fr);
+   }
+   @include mq(mobile) {
+      grid-template-columns: repeat(2, 1fr);
+   }
+   &-card {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 50px 20px;
+      color: white;
+      // background: linear-gradient(
+      //    209.21deg,
+      //    rgba(90, 54, 192, 0.4) 13.57%,
+      //    rgba(29, 145, 252, 0.4) 98.38%
+      // );
+      background: rgba(black, 0.35);
+      box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+      backdrop-filter: blur(4px);
+      border-radius: 10px;
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      border-radius: 20px;
+      transition: 0.3s;
+      // &-peche-exotique {
+      //    background: linear-gradient(
+      //       209.21deg,
+      //       rgb(79 222 41 / 40%) 13.57%,
+      //       rgb(78 169 54 / 40%) 28.38%
+      //    );
+      // }
+      img {
+         object-fit: contain;
+         transition: 0.3s;
+      }
+      h3 {
+         margin-top: 30px;
+         font-family: var(--title-font);
+         text-align: center;
+         text-transform: uppercase;
+         font-size: 1.5rem;
+      }
+      p {
+         font-weight: normal;
+         text-align: center;
+         color: var(--text-color);
+         margin-top: 10px;
+      }
+      &:hover {
+         transform: scale(1.05);
+         img {
+            transform: scale(0.9) translateY(-5px);
+         }
+      }
+   }
+}

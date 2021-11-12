@@ -1,0 +1,65 @@
+@use 'sass:map';
+
+@font-face {
+   font-family: "MostraNuova";
+   src: url("./fonts/mostranuova5.woff2") format("woff2"),
+      url("./fonts/mostranuova5.woff") format("woff");
+}
+@font-face {
+   font-family: "MostraNuova2";
+   src: url("./fonts/mostranuova2.woff2") format("woff2"),
+      url("./fonts/mostranuova2.woff") format("woff");
+}
+
+*,
+*:before,
+*:after {
+   box-sizing: border-box;
+}
+:root {
+   --primary: hsl(250, 9%, 14%);
+   --secondary: hsl(217, 97%, 12%) 13.57%;
+   --orange: hsl(42, 90%, 50%, 1);
+   --black: #141015;
+   --white: #d0d0d0;
+   --darkgrey: #35323b;
+   --lightgrey: #585858;
+   --bleuvert: #25a8b5;
+   --main-font: "MostraNuova", sans-serif;
+   --title-font: "MostraNuova2", sans-serif;
+}
+
+[data-theme="dark"] {
+   --text-color: hsl(217, 28%, 73%);
+   --text-color-light: hsl(0, 0%, 80%);
+   // --bg-body: linear-gradient(
+   //    190deg,
+   //    hsl(217, 97%, 12%) 13.57%,
+   //    hsl(205, 41%, 8%) 98.38%
+   // );
+   --bg-body: url("/images/bg-body-white.svg");
+   --bg-color: hsl(204, 43%, 8%, 1);
+   --primary: hsl(250, 9%, 14%);
+   --bg-color-light: hsl(250, 9%, 24%);
+}
+
+[data-theme="light"] {
+   --text-color: hsl(0, 0%, 10%);
+   --text-color-light: hsl(0, 0%, 20%);
+   --bg-body: url("/images/bg-body-black.svg");
+   --bg-color: hsl(0, 0%, 90%);
+   --bg-color-light: hsl(250, 9%, 24%);
+}
+
+$breakpoints: (
+   mobile: 767px,
+   tablet: 1024px,
+);
+
+@mixin mq($key) {
+   $size: map.get($breakpoints, $key);
+
+   @media (max-width: $size) {
+      @content;
+   }
+}
