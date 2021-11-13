@@ -22,6 +22,9 @@ header {
       display: flex;
       align-items: center;
       gap: 2.5vw;
+      @include mq(mobile) {
+         flex-direction: column;
+      }
       a {
          color: var(--contrast);
          text-transform: uppercase;
@@ -34,18 +37,53 @@ header {
          gap: 1vw;
          svg {
             display: flex;
-            transition: all 0.2s linear;
+            transition: all 0.1s linear;
             cursor: pointer;
             width: 30px;
             height: 30px;
             height: auto;
-            stroke: var(--text-color);
+            stroke: var(--contrast);
             transform: scale(1);
             &:hover {
-               stroke: var(--orange);
                transform: scale(1.1);
             }
          }
+      }
+   }
+   .mobile-toggle {
+      display: none;
+   }
+}
+@include mq(mobile) {
+   .header-wrapper {
+      nav {
+         position: fixed;
+         top: 0;
+         right: 0;
+         height: 100vh;
+         width: 100vw;
+         background-color: var(--orange);
+         z-index: 9;
+         display: flex;
+         flex-direction: column;
+         justify-content: center;
+         gap: 2rem;
+         clip-path: circle(0%);
+         clip-path: ellipse(0px 0px at 100% 0%);
+         transition: 0.3s cubic-bezier(0.74, 0.24, 1, 0.51);
+         a {
+            font-size: 1.8rem;
+         }
+         &.open {
+            clip-path: circle(60%);
+            clip-path: ellipse(75vh 75vh at 90% 20%);
+         }
+      }
+      .mobile-toggle {
+         display: block;
+         position: relative;
+         z-index: 10;
+         font-size: 2rem;
       }
    }
 }

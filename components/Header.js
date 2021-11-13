@@ -1,9 +1,14 @@
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { HiOutlineMenuAlt1 } from "react-icons/hi";
 // import { FiSun } from "react-icons/fi";
 // import { RiMoonClearFill } from "react-icons/ri";
 
 const Header = ({ theme, switchTheme }) => {
+   const [isNavOpen, setIsNavOpen] = useState(false);
+   const links = ["accueil", "prestations", "realisations", "contact"];
+
    return (
       <header>
          <div className="header-wrapper container">
@@ -12,11 +17,12 @@ const Header = ({ theme, switchTheme }) => {
                   <Image src={"/images/logo.svg"} width="60" height="60" />
                </a>
             </Link>
-            <nav>
-               <Link href="/">Accueil</Link>
-               <Link href="/prestations">Prestations</Link>
-               <Link href="/realisations">Réalisations</Link>
-               <Link href="/contact">Contact</Link>
+            <nav className={isNavOpen ? "open" : ""}>
+               {links.map((link) => (
+                  <Link key={link} href={link === "accueil" ? "/" : `/${link}`}>
+                     <a onClick={() => setIsNavOpen(!isNavOpen)}>{link}</a>
+                  </Link>
+               ))}
                <div className="theme-switcher" onClick={switchTheme}>
                   {theme === "light" ? (
                      <svg
@@ -71,6 +77,10 @@ const Header = ({ theme, switchTheme }) => {
                   /> */}
                </div>
             </nav>
+            <HiOutlineMenuAlt1
+               className="mobile-toggle"
+               onClick={() => setIsNavOpen(!isNavOpen)}
+            />
          </div>
       </header>
    );

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import { Waves } from "./Waves";
 
 const Hero = () => {
    return (
@@ -7,6 +8,7 @@ const Hero = () => {
          <div className="waves">
             <div className="new-wave"></div>
          </div>
+         {/* <Waves /> */}
          <div className="container">
             <h1>Homepage</h1>
          </div>
