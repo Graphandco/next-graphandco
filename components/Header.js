@@ -2,8 +2,6 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { HiOutlineMenuAlt1 } from "react-icons/hi";
-// import { FiSun } from "react-icons/fi";
-// import { RiMoonClearFill } from "react-icons/ri";
 
 const Header = ({ theme, switchTheme }) => {
    const [isNavOpen, setIsNavOpen] = useState(false);

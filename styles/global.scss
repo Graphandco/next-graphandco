@@ -1,8 +1,5 @@
 @import "reset";
 @import "config";
-@import "header";
-@import "home-hero";
-@import "realisation-card";
 
 body {
    font-family: var(--main-font);
@@ -10,6 +7,7 @@ body {
    //background-image: var(--bg-body);
    background-color: var(--bg-color);
    transition: background 0.5s;
+   font-size: 18px;
 }
 h1,
 h2,
@@ -19,12 +17,12 @@ h5 {
    font-family: var(--title-font);
    line-height: 1;
    color: white;
+   margin: 0;
 }
 h1 {
    font-size: calc(2rem + 1vw);
    text-transform: uppercase;
    position: relative;
-   margin-bottom: 5rem;
 }
 a {
    color: var(--orange);
@@ -34,7 +32,7 @@ a {
 .container {
    max-width: 1250px;
    margin: 0 auto;
-   padding: 2vw;
+   padding: 2vw 5vw;
 }
 .site-wrapper {
    display: flex;
@@ -45,3 +43,7 @@ main {
    flex-grow: 1;
    position: relative;
 }
+
+@import "header";
+@import "home-hero";
+@import "realisation-card";
