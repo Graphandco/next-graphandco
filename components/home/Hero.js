@@ -21,6 +21,12 @@ const Hero = () => {
          },
          "-=5"
       );
+      let tl2 = gsap.timeline({ delay: 0 });
+      tl2.to(".new-wave", {
+         backgroundPositionX: "-500px",
+         ease: "Power2.easeOut",
+         duration: 100,
+      });
    }, []);
 
    return (

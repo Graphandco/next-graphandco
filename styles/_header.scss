@@ -1,5 +1,5 @@
 header {
-   background-image: url("/images/stars.svg");
+   background-image: var(--stars);
    height: 120px;
    animation: stars 50s linear alternate-reverse infinite;
 }

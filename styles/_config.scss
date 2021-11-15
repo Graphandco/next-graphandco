@@ -42,6 +42,7 @@
    --bg-color: hsl(204, 43%, 8%, 1);
    --primary: hsl(250, 9%, 14%);
    --bg-color-light: hsl(250, 9%, 24%);
+   --stars: url("/images/stars.svg");
 }
 
 [data-theme="light"] {
@@ -51,6 +52,7 @@
    --bg-body: url("/images/bg-body-black.svg");
    --bg-color: hsl(0, 0%, 90%);
    --bg-color-light: hsl(250, 9%, 24%);
+   --stars: url("/images/stars-lightmode.svg");
 }
 
 $breakpoints: (
