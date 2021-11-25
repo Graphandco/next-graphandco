@@ -2,6 +2,8 @@ header {
    background-image: var(--stars);
    height: 120px;
    animation: stars 50s linear alternate-reverse infinite;
+   position: relative;
+   z-index: 2;
 }
 @keyframes stars {
    0% {
@@ -23,10 +25,12 @@ header {
       display: flex;
       align-items: center;
       gap: 2.5vw;
+      position: relative;
       @include mq(mobile) {
          flex-direction: column;
       }
       a {
+         padding: 20px 0;
          color: var(--contrast);
          text-transform: uppercase;
          font-size: 1.1rem;
@@ -53,6 +57,81 @@ header {
    }
    .mobile-toggle {
       display: none;
+   }
+   .user {
+      .avatar {
+         cursor: pointer;
+         transform: scale(1);
+         transition: 0.3s;
+         &:hover {
+            transform: scale(1.05);
+         }
+      }
+      .user-manage {
+         position: absolute;
+         right: 0;
+         margin-top: 10px;
+         background-color: var(--orange);
+         color: black;
+         border-radius: 5px;
+         .user-name {
+            padding: 10px 15px;
+            span {
+               font-weight: bold;
+            }
+         }
+         .error,
+         .logout {
+            background: black;
+            color: white;
+            text-align: center;
+            padding: 8px 5px;
+         }
+         .logout {
+            cursor: pointer;
+            transition: 0.3s;
+            &:hover {
+               background: white;
+               color: black;
+            }
+         }
+         .login-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            margin-top: 10px;
+            padding: 10px 15px;
+            input {
+               background: transparent !important;
+               background-color: transparent !important;
+               border: none;
+               outline: none;
+               border-bottom: 2px solid black;
+               &::placeholder {
+                  font-style: italic;
+                  opacity: 0.4;
+                  color: black;
+               }
+            }
+            button {
+               display: inline-block;
+               width: 70px;
+               margin: auto;
+               background: white;
+               border: none;
+               outline: none;
+               padding: 5px;
+               cursor: pointer;
+               font-family: var(--main-font);
+               font-weight: 500;
+               transition: 0.3s;
+               &:hover {
+                  color: white;
+                  background-color: black;
+               }
+            }
+         }
+      }
    }
 }
 @include mq(mobile) {

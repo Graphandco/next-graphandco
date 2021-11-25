@@ -23,16 +23,16 @@ const Realisations = ({ realisations }) => {
          <Head>
             <title>Graph and Co | Réalisations</title>
          </Head>
-         <div className="waves">
+         {/* <div className="waves">
             <div className="wave1"></div>
             <div className="wave2"></div>
             <div className="wave3"></div>
             <div className="wave4"></div>
             <div className="wave5"></div>
-         </div>
+         </div> */}
          <div className="container">
             <h1>Réalisations</h1>
-            <div className="realisations">
+            {/* <div className="realisations">
                {realisations.map((rea) => (
                   <Link
                      key={rea.sys.id}
@@ -51,7 +51,7 @@ const Realisations = ({ realisations }) => {
                      </a>
                   </Link>
                ))}
-            </div>
+            </div> */}
          </div>
       </>
    );

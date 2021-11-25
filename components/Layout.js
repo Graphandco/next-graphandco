@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Header from "./Header";
+import Header from "./header/Header";
 
 export default function Layout({ children }) {
    const [theme, setTheme] = useState("dark");

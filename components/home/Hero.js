@@ -4,6 +4,13 @@ import { gsap } from "gsap";
 import Button from "../custom/Button";
 
 const Hero = () => {
+   gsap.config({
+      autoSleep: 60,
+      force3D: false,
+      nullTargetWarn: false,
+      trialWarn: false,
+      units: { left: "%", top: "%", rotation: "rad" },
+   });
    useEffect(() => {
       let tl = gsap.timeline({ delay: 0 });
       tl.to(".new-wave", {
@@ -31,9 +38,9 @@ const Hero = () => {
 
    return (
       <section className="hero">
-         <div className="waves">
+         {/* <div className="waves">
             <div className="new-wave"></div>
-         </div>
+         </div> */}
          {/* <Waves /> */}
          <div className="container">
             <div className="subtitle">Création de sites web</div>

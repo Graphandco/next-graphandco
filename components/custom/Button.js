@@ -1,3 +1,4 @@
+import { useState, useEffect } from "react";
 import styled from "styled-components";
 import Link from "next/link";
 
@@ -14,6 +15,12 @@ const Button = ({
    mb,
    ml,
 }) => {
+   const [hasMounted, setHasMounted] = useState(false);
+   useEffect(() => {
+      setHasMounted(true);
+   }, []);
+
+   if (!hasMounted) return null;
    return (
       <Btn
          small={small}
@@ -75,7 +82,7 @@ const Btn = styled.button`
    &:hover,
    &:focus {
       span {
-         color: var(--text-color);
+         color: var(--theme-color);
       }
       &:before {
          -webkit-clip-path: circle(70% at 50% 50%);

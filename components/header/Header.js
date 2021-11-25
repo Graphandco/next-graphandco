@@ -2,6 +2,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { HiOutlineMenuAlt1 } from "react-icons/hi";
+import User from "./User";
 
 const Header = ({ theme, switchTheme }) => {
    const [isNavOpen, setIsNavOpen] = useState(false);
@@ -74,6 +75,7 @@ const Header = ({ theme, switchTheme }) => {
                      className={theme === "dark" ? "active dark" : "light"}
                   /> */}
                </div>
+               <User />
             </nav>
             <HiOutlineMenuAlt1
                className="mobile-toggle"
